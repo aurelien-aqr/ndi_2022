@@ -7,7 +7,7 @@ Projet réalisé lors de la **[Nuit de l'Info 2022](https://www.nuitdelinfo.com/
 ## Réalisations
 
 - **[Site Web](https://aurelien-aqr.github.io/ndi_2022/)** : Informations sur les IST et jeux éducatifs.
-- **[Jeu MSTCity](#)** : Un visual novel où le joueur doit éviter les IST en faisant les bons choix.
+- **[Jeu MSTCity](https://aurelien-aqr.github.io/MSTCity/)** : Un visual novel où le joueur doit éviter les IST en faisant les bons choix.
 
 ## Résultat
 
