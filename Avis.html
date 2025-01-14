@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <title>Votre avis nous intéresse</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <a href="https://www.sida-info-service.org/">
+                <img src="images/images_index/Logo_Sidaction.png" alt="logo_sida" class="logo_sida"></a>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="menu-deroulant">
+                <a href="#">Réalisations</a>
+                <ul class="sous-menu">
+                    <li><a href="Assassins_Cread/indexAssassin'sCreed.html">Dans le monde d'Assassin's Creed</a></li>
+                    <li><a href="https://webinfo.iutmontp.univ-montp2.fr/~ALQUIERA/index.html">Jeu MSTcity</a></li>
+                    <li><a href="./Resource.html">Ressource</a></li>
+                </ul>
+            </li>
+            <li><a href="Avis.html">Donnez-nous votre avis</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<div id="formulaire">
+    <div><label for="surname">Nom*</label>
+        <input name="nom" type="text" required></div>
+    <div><label for="surname">Prenom*</label>
+        <input id="surname" name="prenom" type="text" required></div>
+    <div><label for="email">Email: *</label>
+        <input type="email" id="email" name="email" placeholder="yourmail@domain.com" required></div>
+    <div><label for="postal">Code Postal*</label>
+        <input id="postal" name="postal" type="text" maxlength="5" minlength="5" required></div>
+    <div><label for="pays">Pays*</label>
+        <select name="pays" id="pays" required>
+            <option value="">________</option>
+            <option value="Fr">France</option>
+            <option value="An">Angleterre</option>
+            <option value="Ch">Chine</option>
+            <option value="Es">Espagne</option>
+        </select>
+    </div>
+    <div>
+        <span>Vous avez entendu parler de nous via ? </span>
+        <input id="youtube" type="radio" name="question" value="Youtube">
+        <label for="youtube">Youtube</label>
+        <input id="Instagram" type="radio" name="question" value="Instagram">
+        <label for="Instagram">Instagram</label>
+        <input id="Twitter" type="radio" name="question" value="Twitter">
+        <label for="Twitter">Twitter</label>
+        <input id="Mail" type="radio" name="question" value="Mail">
+        <label for="Mail">Mail</label>
+        <input id="Autre" type="radio" name="question" value="Autre">
+        <label for="Autre">Autre</label>
+    </div>
+    <div>
+        <label for="libre">Votre avis sur le site</label>
+        <textarea id="libre" name="libre" rows="4" cols="40"></textarea>
+    </div>
+    <input type="submit" value="Envoyer">
+</div>
+    <p style="margin-left:79%;"><a href="./Easter Eggs/EasterEgg2.html" style="text-decoration:none; color:transparent;">Easter Egg</a></p>
+</main>
+</body>
+</html>

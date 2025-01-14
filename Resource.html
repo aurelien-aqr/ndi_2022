@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./css/Hideux_CSS.css">
+  <title>Error</title>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <a href="https://www.francealzheimer.org/comprendre-la-maladie/la-maladie-dalzheimer/premiers-reperes-maladie/">
+        <img src="images/images_index/Logo_Sidaction.png" alt="logo_sida" class="logo_sida"></a>
+      <li><a href="index.html">Accueil</a></li>
+      <li class="menu-deroulant">
+        <a href="#">Réalisations</a>
+        <ul class="sous-menu">
+          <li><a href="indexAssassin'sCreed.html">Dans le monde d'Assassin's Creed</a></li>
+          <li><a href="https://webinfo.iutmontp.univ-montp2.fr/~ALQUIERA/index.html">Jeu MSTcity</a></li>
+          <li><a href="./Resource.html">Ressource</a></li>
+        </ul>
+      </li>
+      <li id = avis ><a href="Avis.html">Donnez-nous votre avis</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="texte">
+    <h1 class="titreIndex" style="background-image: url('./images/images_index/giphy (1).gif');">RESOURCE</h1>
+    <h2 style="background-image: url('./images/images_index/giphy (1).gif');">
+      Contributeurs aux projets Wikimedia. « CSC — Wikipédia ». Wikipédia, l'encyclopédie libre. https://fr.wikipedia.org/wiki/CSC (consulté le 2 déc. 2022).
+    </h2>
+    <h2>
+      S. a. 8 Shot. « SexInfo ». Insert title here. https://webinfo.iutmontp.univ-montp2.fr/~ALQUIERA/web/ (consulté le 2 déc. 2022).
+    </h2>
+    </div>
+  <div id = a style="text-align:center; margin:30px auto 0 auto;font-size:30px; width:12%; background-color:white; padding:4px; border-radius:1em;">
+    <a style="text-decoration:none; color:black;" href="./Resource.html">Plus d'info</a>
+  </div>
+  <div class="video">
+    <iframe width="560" height="315"  src="https://www.youtube.com/watch?v=8x9V6YBljo0&ab_channel=LaTechavecBertrand" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <h3>Notre site est un escape game et il n'y a rien ici ...</h3>
+
+</main>
+
+<footer>
+  <div id="page_Wrapper">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+      <img alt="escape" class="escape" src="./images/la.jpg" id="escape"
+           style="position: fixed;"/>
+    </a>
+  </div>
+  <script>
+    window.onLoad = Prep();
+
+    function Prep() {
+      window_Height = window.innerHeight;
+      window_Width = window.innerWidth;
+
+      image_Element = document.getElementById("escape");
+      image_Height = image_Element.clientHeight;
+      image_Width = image_Element.clientWidth;
+
+      availSpace_V = window_Height - image_Height;
+      availSpace_H = window_Width - image_Width;
+
+      var changeInterval = 700; // Time has to be in miliseconds. So, 3000 is 3 seconds
+      setInterval(moveImage, changeInterval);
+    }
+
+    function moveImage() {
+      var randNum_V = Math.round(Math.random() * availSpace_V);
+      var randNum_H = Math.round(Math.random() * availSpace_H);
+
+      image_Element.style.top = randNum_V + "px";
+      image_Element.style.left = randNum_H + "px";
+    }
+  </script>
+  <script id = move>
+    //Snow - http://www.btinternet.com/~kurt.grigg/javascript
+
+    if  ((document.getElementById) &&
+            window.addEventListener || window.attachEvent){
+
+      (function(){
+
+//Configure here.
+
+        var num = 10;   //Number of flakes
+        var timer = 30; //setTimeout speed. Varies on different comps
+        var enableinNS6 = 1 //Enable script in NS6/Mozilla? Snow animation could be slow in those browsers. (1=yes, 0=no).
+        var url_gif= "./images/S.png"; // adresse de l'image
+
+//End.
+
+        var y = [];
+        var x = [];
+        var fall = [];
+        var theFlakes = [];
+        var sfs = [];
+        var step = [];
+        var currStep = [];
+        var h,w,r;
+        var d = document;
+        var pix = "px";
+        var domWw = (typeof window.innerWidth == "number");
+        var domSy = (typeof window.pageYOffset == "number");
+        var idx = d.getElementsByTagName('div').length;
+
+        if (d.documentElement.style &&
+                typeof d.documentElement.style.MozOpacity == "string")
+          num = 12;
+
+        for (i = 0; i < num; i++){
+          sfs[i] = 15; // Math.round(1 + Math.random() * 1);
+
+          document.write('<div id="flake'+(idx+i)+'" style="position:absolute;top:0px;left:0px;width:"><img src="'+url_gif+'"><\/div>');
+
+
+
+// '+sfs[i]+'px;height:'+sfs[i]+'px;background-color:#ffffff;font-size:'+sfs[i]+'px;border:1px solid #dddddd;
+
+          currStep[i] = 0;
+          fall[i] = (sfs[i] == 1)?
+                  Math.round(2 + Math.random() * 2): Math.round(3 + Math.random() * 2);
+          step[i] = (sfs[i] == 1)?
+                  0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05 ;
+        }
+
+
+        if (domWw) r = window;
+        else{
+          if (d.documentElement &&
+                  typeof d.documentElement.clientWidth == "number" &&
+                  d.documentElement.clientWidth != 0)
+            r = d.documentElement;
+          else{
+            if (d.body &&
+                    typeof d.body.clientWidth == "number")
+              r = d.body;
+          }
+        }
+
+
+        function winsize(){
+          var oh,sy,ow,sx,rh,rw;
+          if (domWw){
+            if (d.documentElement && d.defaultView &&
+                    typeof d.defaultView.scrollMaxY == "number"){
+              oh = d.documentElement.offsetHeight;
+              sy = d.defaultView.scrollMaxY;
+              ow = d.documentElement.offsetWidth*0.80;
+              sx = d.defaultView.scrollMaxX;
+              rh = oh-sy;
+              rw = ow-sx;
+            }
+            else{
+              rh = r.innerHeight;
+              rw = r.innerWidth*0.80;
+            }
+            h = rh - 2;
+            w = rw - 2;
+          }
+          else{
+            h = r.clientHeight - 2;
+            w = r.clientWidth*0.80;
+          }
+        }
+
+
+        function scrl(yx){
+          var y,x;
+          if (domSy){
+            y = r.pageYOffset;
+            x = r.pageXOffset;
+          }
+          else{
+            y = r.scrollTop;
+            x = r.scrollLeft;
+          }
+          return (yx == 0)?y:x;
+        }
+
+
+        function snow(){
+          var dy,dx;
+
+          for (i = 0; i < num; i++){
+            dy = fall[i];
+            dx = fall[i] * Math.cos(currStep[i]);
+
+            y[i]+=dy;
+            x[i]+=dx;
+
+            if (x[i] >= w || y[i] >= h){
+              y[i] = -10;
+              x[i] = Math.round(Math.random() * w);
+              fall[i] = (sfs[i] == 1)?
+                      Math.round(2 + Math.random() * 2): Math.round(3 + Math.random() * 2);
+              step[i] = (sfs[i] == 1)?
+                      0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05 ;
+            }
+
+            theFlakes[i].top = y[i] + scrl(0) + pix;
+            theFlakes[i].left = x[i] + scrl(1) + pix;
+
+            currStep[i]+=step[i];
+          }
+          setTimeout(snow,timer);
+        }
+
+
+        function init(){
+          winsize();
+          for (i = 0; i < num; i++){
+            theFlakes[i] = document.getElementById("flake"+(idx+i)).style;
+            y[i] = Math.round(Math.random()*h);
+            x[i] = Math.round(Math.random()*w);
+          }
+          snow();
+        }
+
+
+        if (window.addEventListener){
+          window.addEventListener("resize",winsize,false);
+          window.addEventListener("load",init,false);
+        }
+        else if (window.attachEvent){
+          window.attachEvent("onresize",winsize);
+          window.attachEvent("onload",init);
+        }
+
+      })();
+    }//End.
+  </script></div>
+
+  <p class="copyright">© Copyright 2022 Sète à 8 Shot Nuit de l'Info - <cite>Ce site internet a été programmé durant la Nuit de l’Info 2022.</cite></p>
+</footer>
+</body>
+</html>

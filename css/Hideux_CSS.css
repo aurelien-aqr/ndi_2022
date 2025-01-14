@@ -1,0 +1,312 @@
+/* Le but est de faire le truc le plus moche*/
+/* CSS */
+
+/* Haut de la page (Menu de sélection "Général") */
+:root{
+    --hauteur-menu: 60px;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat, sans-serif;
+}
+nav {
+    width: 100%;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+    z-index:5;
+}
+
+nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(61, 112, 189, 0.98);
+    height: var(--hauteur-menu);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav > ul > li {
+    background-color: #17da21;
+    position: relative;
+    height: 100%;
+    flex: 1;
+}
+
+nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li a {
+    text-decoration: none;
+    color: #eed2ad;
+}
+
+.menu-deroulant > a:after{
+    content: '❯';
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+.sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    background-color: #1520f1;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+
+}
+
+.sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+nav > ul > li:hover > a{
+    color: #63007e;
+}
+
+.sous-menu > li:hover {
+    background-color: rgba(236, 33, 172, 0.33);
+}
+
+.sous-menu > li:hover > a {
+    color: rgba(63, 18, 18, 0.63);
+}
+
+@keyframes rotationFleche {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+.menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu {
+    0% {
+        box-shadow: 0px 3px 3px 1px rgba(66, 157, 169, 0.68);
+        border-top: 3px solid #70985c;
+    }
+    30% {
+        box-shadow: 0px 3px 3px 1px rgba(185, 37, 37, 0.3);
+    }
+    100% {
+        max-height: 50em;
+        border-top: 3px solid #7e257c;
+        box-shadow: 0px 3px 3px 1px rgba(194, 138, 138, 0.3);
+    }
+}
+
+.menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+}
+
+/*_____________________*/
+
+/* BODY */
+
+body { /* Toute la page sauf head et footer */
+    background-color: #b09b30;
+    margin: auto;
+    height:100%;
+}
+
+h1 {
+    background-size:cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 50px;
+    margin-top:20px;
+    width: 100%;
+    text-align: center;
+    line-height: 120%;
+}
+
+h2 { /* Sous Titre */
+    font-style: italic;
+    font-size: 25px;
+    color: #a74ebb;
+    margin: 10px auto auto auto;
+    width: 75%;
+    text-align: center;
+    line-height: 120%;
+}
+
+h3 { /* Titres de Paragraphes */
+    font-size: 20px;
+    color: #2da887;
+    margin:15px 0 15px 0;
+    width: 100%;
+}
+
+h4{
+    font-size: 17px;
+    color: rgba(105, 115, 103, 0.36);
+    margin:15px 0 15px 0;
+    width: 100%;
+}
+/*Paramètres de la page*/
+main{
+    display: flex;
+    justify-content: center;
+    display:block;
+}
+
+
+
+/* ACCUEIL */
+.logo_sida{
+    margin-top:2px;
+    margin-left:76%;
+    width:3%;
+    position:absolute;
+    z-index:1
+}
+
+.slider {
+    width: 800px;
+    margin: 30px auto;
+    position: relative;
+}
+.slider-viewport {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius:1em;
+    border:solid 3px #47d25e;
+}
+.slider-content {
+    display: grid;
+    grid-auto-flow: column;
+    -webkit-transition: 1s all;
+    transition: 1s all;
+}
+.slider-content img {
+    width: 800px;
+    height: 400px;
+}
+.slider-nav {
+    position: absolute;
+    width: 100%;
+    bottom: -30px;
+    margin-top: 10px;
+    text-align: center;
+}
+.slider-nav a {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(55, 187, 112, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(203, 45, 45, 0.3);
+    display: inline-block;
+    background-color: #5ebd77;
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+}
+.slider-nav a:hover {
+    background-color: #150d0d;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(31, 96, 143, 0.53);
+    box-shadow: 0px 0px 5px 0px rgba(29, 177, 197, 0.8);
+}
+#img2:target .slider-content {
+    -webkit-transform: translateX(-800px);
+    transform: translateX(-800px);
+}
+#img3:target .slider-content {
+    -webkit-transform: translateX(-1600px);
+    transform: translateX(-1600px);
+}
+#img4:target .slider-content {
+    -webkit-transform: translateX(-2400px);
+    transform: translateX(-2400px);
+}
+#img5:target .slider-content {
+    -webkit-transform: translateX(-3200px);
+    transform: translateX(-3200px);
+}
+
+.video{
+    padding-top:15px;
+    justify-content:center;
+    text-align:center;
+}
+
+.copyright{
+    background-color: #b93333;
+}
+
+#formulaire{
+    background-color: #6c3a43;
+    text-align:center;
+    width:350px;
+    border:solid 3px #12e12e;
+    border-radius: 2em;
+    margin:200px auto 0 auto;
+    padding:5px 0 5px 0;
+    box-shadow: 12px 12px 2px 1px rgba(200, 13, 229, 0.96);
+}
+
+#formulaire > div {
+    margin-bottom:15px;
+}
+
+footer:hover{
+    width: 400px;
+    padding-bottom: 200px;
+    background-color: #12e12e;
+
+}
+
+footer:hover .copyright{
+    background-color: #12e12e;
+
+}
+
+nav > ul > li:hover nav > ul >li {
+    background-color: #ffea00;
+    position:fixed;
+    height: 120%;
+    flex: 1;
+    transform: rotate(30deg);
+}
+
+
+.sous-menu:hover {
+    margin-top: var(--hauteur-menu);
+    width: 120%;
+    text-align: right;
+    background-color: #ffe900;
+    border-radius: 6px;
+    overflow: hidden;
+    transform: rotate(30deg);
+
+}
+
+.video:hover{
+    visibility: hidden;}
+
+#avis:hover nav{
+    width: 170%;
+    font-size: 5px;
+    position: static;
+    z-index:5;
+}
+#a:hover{
+    width: 10%;
+}

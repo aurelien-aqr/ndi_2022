@@ -1,0 +1,299 @@
+
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-family: system-ui;
+    font-size: 300%;
+    color: #b28f33;
+    text-shadow: 2px 2px #4e5153;
+}
+
+h3{
+    font-size: 600%;
+    text-align: center;
+    text-decoration: underline;
+    color: darkred;
+
+}
+
+.PG{/*Texte plus grand*/
+    text-align: center;
+    font-weight: bold;
+}
+
+.texte1{
+    font-size: 140%;
+    font-weight: bold;
+    background-color: rgba(255,228,196,0.5) ;
+    border-radius:1em;
+    text-align: center;
+
+}
+
+.texte2{
+    color: aliceblue;
+    background: linear-gradient(to bottom right, #011e31, #293841);
+    border-radius: 1em;
+    text-align: center;
+    width: 80%;
+    font-size: 110%;
+
+}
+
+.texte3{
+    color: rgba(110, 172, 204, 0.89);
+    background: linear-gradient(to bottom right, #011e31, #293841);
+    border-radius: 1em;
+    text-align: center;
+}
+
+.texte4{
+    background-color: rgba(255,228,196,0.5) ;
+    border-radius: 0.4em;
+    font-weight: bold;
+    font-size: 150%;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.96);
+
+}
+
+.texte5{
+    width: 100%;
+    border-radius: 0.4em;
+    font-weight: bold;
+    font-size: 150%;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.96);
+    text-align: center;
+}
+
+.texte6{
+    width: 100%;
+    border-radius: 0.4em;
+    font-weight: bold;
+    font-size: 150%;
+    text-decoration: none;
+    color: rgba(180, 27, 27, 0.96);
+    text-align: center;
+}
+
+.plus{
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.plus_2{
+    background: linear-gradient(to bottom right, #83602e, #725227);
+    border-radius: 0.4em;
+    font-weight: bold;
+    font-size: 200%;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.96);
+
+
+}
+
+/*====Photo====*/
+#démocratie-numérique {
+    float: left;
+    width: 20%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2%;
+    border-radius: 1em;
+}
+
+.chrono {
+    width: 100%;
+    border-radius: 1em 1em 0em 0em;
+}
+
+
+
+#TL{
+
+    padding-left: 25%;
+    background: linear-gradient(to bottom right, #011e31, #293841);
+    border-radius: 1em;
+}
+
+.ligne{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+/*==== Fond ====*/
+#home{
+    max-width: 100%;
+    height: auto;
+    background-image: url(.././images/centre_ville.jpg);
+    background-size: cover;
+}
+
+#home2{
+    max-width: 100%;
+    height: auto;
+    background-image: url(.././images/justice.jpg);
+    background-size: cover;
+}
+
+#home3{
+    max-width: 100%;
+    height: auto;
+    background-image: url(.././images/désyncro.jpg);
+    background-size: cover;
+}
+
+#home4{
+    max-width: 100%;
+    height: auto;
+    background-image: url(.././images/PDG.jpg);
+    background-size: cover;
+}
+
+#home5{
+    max-width: 100%;
+    height: auto;
+    background-image: url(.././images/haut_pond.jpg);
+    background-size: cover;
+}
+
+#home6{
+    max-width: 100%;
+    height: auto;
+    background-image: url(.././images/chemin.jpg);
+    background-size: cover;
+
+
+}
+
+#home7 {
+    max-width: 100%;
+    height: auto;
+    background-image: url(.././images/TourMagne.jpg);
+    background-size: cover;
+}
+
+/*Menu*/
+header{
+    position: sticky;
+    width: 600px;
+    background-color: #545959;
+    box-shadow: 3px 5px #5d6264;
+    height: 30px;
+    border-radius: 1em;
+    margin: 5px;
+    vertical-align: middle;
+
+    padding-bottom: 20px;
+    top: 10px;
+}
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index:3;
+    width:97%;
+    padding-top: 0px;
+
+}
+
+nav .submenu{
+    display: none;
+    background-color: gray;
+    border:2px solid black;
+    text-align: center;
+    border-radius: 1em;
+}
+
+/*Afficher au survol les sous-menus*/
+nav>div:hover .submenu{
+    display: block;
+}
+/*Cacher la puce*/
+.puce{
+    visibility:hidden;
+}
+/*Afficher la puce au survol*/
+.submenu a:hover .puce {
+    visibility: visible;
+}
+
+
+div a{
+    color: #2f3033;
+    text-decoration: none;
+}
+
+nav > div > a {
+    font-family: system-ui;
+    display: inline;
+    font-size: 30px;
+    padding-left:24px;
+
+}
+
+.submenu div a{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.96);
+}
+
+nav>div:hover .submenu{
+    display: block;
+}
+
+/*---------------------*/
+
+main{
+    display: block;
+}
+
+article{
+
+    width: 60%;
+
+}
+/*Modifications du menu a droite de la page*/
+aside{
+
+    width: 30%;
+    margin-left: 5%;
+
+}
+
+footer{
+    color: #5d6264;
+}
+
+.L0{
+    padding-left: 0%;
+}
+
+.L30{
+    padding-left: 30%;
+}
+
+.L60{
+    padding-left: 60%;
+}
+
+body{
+    width: 80%;
+    padding-left: 10%;
+}
+
+
+
+
+
+img{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+
+}
